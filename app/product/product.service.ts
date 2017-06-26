@@ -30,4 +30,9 @@ export class ProductService {
             }
         }
     }
+
+    deleteProduct(product: Product)
+    {
+        this.productItems.splice(this.productItems.indexOf(product), 1);
+    }
 }

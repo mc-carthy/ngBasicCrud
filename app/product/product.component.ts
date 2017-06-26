@@ -64,6 +64,11 @@ export class ProductComponent implements OnInit {
         this.productForm = false;
     }
 
+    deleteProduct(product: Product)
+    {
+        this.productService.deleteProduct(product);
+    }
+
     cancelForm()
     {
         this.productForm = false;
