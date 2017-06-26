@@ -12,4 +12,14 @@ export class ProductService {
     getProducts(): Product[] {
         return this.productItems;
     }
+
+    addProduct(product: Product)
+    {
+        this.productItems.push(product);
+    }
+
+    updateProduct(product: Product)
+    {
+
+    }
 }
