@@ -10,6 +10,9 @@ import { ProductService } from './product.service';
 export class ProductComponent implements OnInit {
 
     products: Product[];
+    newProduct: any = {};
+    productForm: boolean = false;
+    isNewForm: boolean;
 
     constructor (
         private productService : ProductService
@@ -24,6 +27,23 @@ export class ProductComponent implements OnInit {
     getProducts()
     {
         this.products = this.productService.getProducts();
+    }
+
+    editProduct(product: Product)
+    {
+        if (!product)
+        {
+            this.productForm = false;
+            return;
+        }
+        this.productForm = true;
+        this.isNewForm = false;
+        this.newProduct = product;
+    }
+
+    saveProduct()
+    {
+
     }
 
 }
