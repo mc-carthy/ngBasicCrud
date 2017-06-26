@@ -12,11 +12,11 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Product ID</td>
-                    <td>Product Name</td>
-                    <td>Product Description</td>
-                    <td>Product Price</td>
+                <tr *ngFor="let p of products">
+                    <td>{{ p.id }}</td>
+                    <td>{{ p.name }}</td>
+                    <td>{{ p.description }}</td>
+                    <td>{{ p.price }}</td>
                     <td>
                         <button class="btn btn-info">
                             <i class="fa fa-edit"></i>
