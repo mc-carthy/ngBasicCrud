@@ -5,20 +5,22 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+import { ProductComponent } from './product/product.component';
 import { NavbarComponent } from './nav/nav.component';
 
 @NgModule({
-  imports: [ BrowserModule,
-                   FormsModule,
-                   AppRoutingModule
-                   ],
-  declarations: [ AppComponent,
-                          HomeComponent,
-                          NavbarComponent
-                          ],
-  providers: [ ],
-  bootstrap:    [ AppComponent ]
+    imports: [
+        BrowserModule,
+        FormsModule,
+        AppRoutingModule
+    ],
+    declarations: [
+        AppComponent,
+        ProductComponent,
+        NavbarComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 
 export class AppModule { }
