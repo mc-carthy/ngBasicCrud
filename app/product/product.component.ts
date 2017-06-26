@@ -59,7 +59,7 @@ export class ProductComponent implements OnInit {
         }
         else
         {
-            // Update existing product
+            this.productService.updateProduct(product);
         }
         this.productForm = false;
     }

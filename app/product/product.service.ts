@@ -18,8 +18,16 @@ export class ProductService {
         this.productItems.push(product);
     }
 
-    updateProduct(product: Product)
+    updateProduct(product: any)
     {
-
+        let products = this.productItems;
+        for (var i = 0; i < products.length; i++)
+        {
+            if (product == products[i])
+            {
+                product = products[i];
+                return products;
+            }
+        }
     }
 }
