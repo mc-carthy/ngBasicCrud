@@ -16,7 +16,7 @@
                     <td>{{ p.id }}</td>
                     <td>{{ p.name }}</td>
                     <td>{{ p.description }}</td>
-                    <td>{{ p.price }}</td>
+                    <td>{{ p.price | currency: "GBP":true:"1.0-2" }}</td>
                     <td>
                         <button class="btn btn-info" (click)="editProduct(p)">
                             <i class="fa fa-edit"></i>

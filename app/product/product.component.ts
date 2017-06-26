@@ -29,6 +29,8 @@ export class ProductComponent implements OnInit {
         this.products = this.productService.getProducts();
     }
 
+    // Consider using a clone object so the info in the table isn't updated as
+    // the user is typing
     editProduct(product: Product)
     {
         if (!product)
@@ -71,6 +73,7 @@ export class ProductComponent implements OnInit {
 
     cancelForm()
     {
+        this.newProduct = {};
         this.productForm = false;
     }
 
